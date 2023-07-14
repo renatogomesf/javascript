@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+            var s = 'javascript'
+
+            "s.length": diz quantos caracteres (espaços contam) a string tem 
+            "s.toUpperCase()": joga tudo para letras MAIÚSCULAS
+            "s.toLowerCase()": joga tudo para letras minúsculas
+        */
+
+        var nome = window.prompt('Qual é seu nome?')
+
+        /*
+            "document.write": mostra dados dentro do site na mesma linha. não é como popup igual o "window.alert"
+
+            "document.writeln": mostra dados dentro do site, mas na linha de baixo.
+
+            é possível usar tags HTML dentro da string
+        */
+        document.write(`Olá, ${nome}! seu nome tem ${nome.length} letras. <br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()} <br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}`)
+
+        /*
+            --Formatação de number:
+
+                var n1 = 1543.5
+                se eu pedir pra mostrar n1, ele vai mostrar 1543.5
+
+                Se eu usar "n.toFixed(2(quantidade de casas decimais))":
+
+                n1.toFixed(2)
+                vai mostrar 1543.50
+
+
+
+            --Para trocar o '(.) (ponto)' por '(,) (vírgula)':
+
+                n1.toFixed(2).replace('.', ',')
+                via mostrar 1543,50
+
+
+
+            --Para transformar em formatação de "dinheiro" (já com ponto e vírgula corretos e duas casas decimais):
+
+                n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+                vai mostrar R$ 1.543,50
+
+                se mudar para "USD", "EUR", ... irá mudar o cifrão da moeda.
+        */
+    </script>
+</body>
+</html>

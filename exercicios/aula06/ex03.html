@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <script>
+
+        //window.prompt: retorna uma string.
+        // o "n" é onde vão os comandos que coletam dados
+
+        /*
+            é preciso converter de string pra número:
+
+            "Number.parseInt(n)": 
+            converte para um número inteiro (desconsidera decimal)
+            pode usar somente "parseInt(n)"
+
+            "Number.parseFloat(n)": 
+            converte para um número real (considera decimal)
+            pode usar somente "parseFloat(n)"
+
+            Mas é totalmente possível usar somente "Number(n)". o próprio JS se vira e descobre se o número é inteiro ou real.
+        */
+
+        /*
+            é possível converter número pra string:
+
+            String(n) ou n.toString()
+        */
+        var n1 = Number(window.prompt('Digite um número:'))
+        var n2 = Number.parseFloat(window.prompt('Digite outro número:'))
+
+        // "+": adição
+            // pra ser adição, é preciso "number + number".
+
+        // "+": concatenação
+            // pra ser concatenação. é preciso "string + string".
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + s)
+
+        /*
+            Template Strings (template de strings/formatador de strings):
+            DEVE usa crase (``) pra delimitar.
+
+            ex:
+            var s = 'javascript'
+
+            'estou aprendendo s': não faz interpolação
+            'estou aprendendo ' + s: usa concatenação
+
+            `estou aprendendo ${s}`: usa template string (com crase delimitando a tempalte string e usando "${}" pra mostrar a variável)
+            "${}": placeholder
+        */
+
+        var n1 = Number(window.prompt('Digite um número:'))
+        var n2 = Number.parseFloat(window.prompt('Digite outro número:'))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+    </script>
+</body>
+</html>
