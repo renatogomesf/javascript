@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(137, 137, 199);
+            color: white;
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- DOM: Document Object Model (modelo de objetos para documentos) -->
+
+    <!-- 
+        Árvore DOM:
+
+        RAIZ:
+        window (objeto window (janela do nevegador))
+            location: diz a localização do site (url, pág. atual, pág. anterior).
+
+            document: documento atual.
+                html:
+                    head:
+                        meta:
+                        title:
+                    body:
+                        h1:
+                        p:
+                            strong:
+                        div:
+
+            history: guarde de onde você veio e pra onde vai.
+
+     -->
+
+     <!--
+        Métodos de seleção de elementos da árvore DOM:
+        quando "Element" está no plural, é preciso definir qual elemento você quer através de colchetes e com a posição do elemento "[0]", "[1]", "[2]", ...
+
+        por Marca:
+            getElementsByTagName()
+
+        por ID:
+            getElementById()
+
+        por Nome:
+            getElementsByName()
+
+        por Classe:
+            getElementByClassName()
+
+        por Seletor (usa sintax do css ("#" para id e "." para class)):
+            querySelector()
+            querySelectorAll()
+     -->
+
+    <h1>Iniciando estudos com DOM</h1>
+    <P id="p01">Aqui vai o resultado</P>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        // "0 (zero nos colchetes)" está pegando o primeiro parágrafo.
+        var p1 = window.document.getElementsByTagName('p')[1]
+        // "1 (um nos colchetes)" está pegando o segundo parágrafo.
+        var p2 = window.document.getElementsByTagName('p')[1]
+        var corpo = window.document.body
+
+        //"p1.innerText": texto que está dentro do p1.
+        //"p2.innerHTML": texto e html (formatação) dentro de p2.
+        //"write": escrever/mostrar
+        window.document.write(p1.innerText)
+        window.document.write(p2.innerHTML)
+        corpo.style.background = 'black'
+        p1.style.color = 'blue'
+
+
+        var d = window.document.getElementById('msg')
+        
+        d.style.background = 'green'
+        
+        //modifica o texto da div por javascript
+        d.innerText = 'estou aguardando...'
+
+
+        var a = window.document.querySelector('p#p01')
+        
+        a.style.background = 'gray'
+    </script>
+</body>
+</html>
