@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area {
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+        Eventos DOM (pra div em específico desse html e com  mouse):
+
+        --os eventos podem ser configurados no html ou no javascript--
+
+        "mouseenter": mouse entra dentro da div
+        "mousemove": mouse se movimentando dentro da div
+        "mousedown": mouse clica e segura na div
+        "mouseup": mouse solta o clique
+        "click": clique comum do mouse
+        "mouseout": mouse sai da div
+
+
+        ---------------------------------------------------------------------------
+        Funções (são executadas quando o evento ocorrer):
+
+        bloco - delimitado por "{}", deve ser nomeado com "function" e deve nomear a função com uma "ação()" e dentro de ação pode ter um ou vários parâmetros "param".
+
+            function ação(param) {
+
+            }
+    -->
+
+    <!-- 
+        "on": quando
+        "onclick": quando clicar, chama o evento nomeado. nesse caso "clicar()"
+        
+        Eventos dentro da tag:
+        onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"
+    -->
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+
+        //var fora da function serve para todos os blocos (mas não é aconselhável por questões de memória.)
+        //caso esteja dentro de uma function, só vai servir para ela.
+        var a = window.document.getElementById('area')
+
+        //Eventos dentro do javascript (fica prestando atenção em um determinado evento)
+        //evento entre áspas simples ('') e nome dado ao evento para ser chamado depois na function depois da vírgula e sem parênteses
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        //É POSSÍVEL DETECTAR ERROS DE DIGITAÇÃO NOS COMANDOS ATRAVÉS DO DEVTOOLS DO GOOGLE CHROME.
+        function clicar() {
+           a.innerText = 'clicou'
+           a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'entrou'
+        }
+        
+        function sair() {
+            a.innerText = 'saiu'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
