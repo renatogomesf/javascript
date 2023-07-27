@@ -20,13 +20,14 @@ function verificar() {
             genero = 'Homem'
 
             if (idade >= 0 && idade < 10) {
-                img. setAttribute('src', 'bebeM.jpg')
+                img.setAttribute('src', 'bebeM.jpg')
             }
+
         } else if (fsex[1].checked) {
             genero = 'Mulher'
         }
 
-        //res.innerHTML = `${genero}, ${idade} anos.`
+        res.innerHTML = `${genero}, ${idade} anos.`
         res.appendChild(img)
     }
 }
