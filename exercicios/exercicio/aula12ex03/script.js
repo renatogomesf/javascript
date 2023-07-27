@@ -12,24 +12,24 @@ function verificar() {
         var idade = ano - Number(fano.value)
         var genero = ''
 
-        //cria uma tag img com id foto
+        //cria tag img no html
         var img = document.createElement('img')
         img.setAttribute('id', 'foto')
-        
+
         if (fsex[0].checked) {
             genero = 'Homem'
 
             if (idade >= 0 && idade < 10) {
-                img.setAttribute('src', 'bebeM.jpg')
+                img.setAttribute('src', 'imagens/bebeM.jpg')
 
             } else if (idade >= 10 && idade < 21) {
-                window.alert('jovem')
+                img.setAttribute('src', 'imagens/jovemM.jpg')
 
             } else if (idade < 50) {
-                window.alert('adulto')
+                img.setAttribute('src', 'imagens/adultoM.jpg')
 
             } else {
-                window.alert('idoso')
+                img.setAttribute('src', 'imagens/idosoM.jpg')
 
             }
 
@@ -37,21 +37,21 @@ function verificar() {
             genero = 'Mulher'
 
             if (idade >= 0 && idade < 10) {
-                window.alert('criança')
+                img.setAttribute('src', 'imagens/bebeF.jpg')
 
             } else if (idade >= 10 && idade < 21) {
-                window.alert('jovem')
+                img.setAttribute('src', 'imagens/jovemF.jpg')
 
             } else if (idade < 50) {
-                window.alert('adulto')
+                img.setAttribute('src', 'imagens/adultoF.jpg')
 
             } else {
-                window.alert('idoso')
+                img.setAttribute('src', 'imagens/idosoF.jpg')
 
             }
         }
 
         res.innerHTML = `${genero}, ${idade} anos.`
-        res.appendChild('img')
+        res.appendChild(img)
     }
 }
