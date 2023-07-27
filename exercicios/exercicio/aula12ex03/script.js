@@ -3,6 +3,7 @@ function verificar() {
     var ano = data.getFullYear()
     var fano = document.getElementById('iano')
     var res = document.querySelector('.res')
+    var texto = document.querySelector('.texto')
 
     //"fano.value.length": checa se a caixa está vazia.
     if (fano.value.length == 0 || fano.value > ano) {
@@ -51,7 +52,7 @@ function verificar() {
             }
         }
 
-        res.innerHTML = `${genero}, ${idade} anos.`
+        texto.innerHTML = `${genero}, ${idade} anos.`
         res.appendChild(img)
     }
 }
