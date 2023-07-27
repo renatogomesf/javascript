@@ -42,14 +42,6 @@ input[type=button] {
     padding: 5px;
 }
 
-
-img {
-    display: none;
-    margin: auto;
-    padding: 10px;
-    border-radius: 50%;
-}
-
 footer {
     margin: 20px;
     text-align: center;
