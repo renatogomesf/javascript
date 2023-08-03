@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background-color: rgb(109, 109, 255);
+    margin: 15px;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.589);
+}
+
+.inicio {
+    margin: 15px;
+}
+
+.fim {
+    margin: 15px;
+}
+
+.passo {
+    margin: 15px;
+}
+
+.botao {
+    margin: 15px;
+}
+
+input[type="button"] {
+    padding: 5px;
+}
+
+.res {
+    margin: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
