@@ -1,0 +1,62 @@
+<!--
+    Variável composta: 
+
+    pode armazenar mais de uma informação/valor dentro da mesma variável. diferentemente da variável comum que só pode armazenar um único valor.
+
+    var a = [0, 1, 2, ...]
+
+    a: array/vetor (que possui elementos (elementos são cada espaço de armazenamento.))
+
+    [0, 1, 2]: elementos (possui espaços da memoria o valor armazenado nele e o índice/chave (key) que começam a contar do zero e organizam o array)
+
+    0, 1, 2: conteúdo/valor armazenado (cada um possui sua chave de indentificação)
+
+    ex:
+    (key)      0  1  2
+    ler num = [5, 8, 4]
+
+    ----------------------------------------------------------------------------------------------------------------
+    Para acrescentar mais dados:
+
+    num[3] = 6: 
+    ou seja, a variável num irá acrescentar o valor 6 na posição/key '3'. caso não exista a key 3, ela irá cria e preencher.
+
+    num.push(7): 
+    acrescenta valores na ultima posição (independente de qual seja). neste caso, irá acrescentar 7 na ultima posição. nesse nosso caso, ira acrescentar 7 na posição/key '4'.
+
+    num.length:
+    diz quantos elementos tem dentro do array. nesse nosso caso, possui 5 elementos.
+
+    num.sort():
+    organiza os elementos em ordem crescente. 
+
+    ------------------------------------------------------------------------------------------------------------
+    Mostrando os valores que existem:
+
+    num[0]: mostra o valor da key '0'. neste caso. mostrará o valor 5
+
+    num[1]: mostra o valor da key '1'. neste caso. mostrará o valor 8. 
+
+    e assim por deante.
+
+    Para mostrar os valores que exitem de forma mais inteligente. utilizamos a estrutura de repetição 'for':
+
+    for (let pos = 0; pos <= num.length; pos++) {
+        console.log(num[pos])
+    }
+
+    Estrutura de repetição 'for' muito mais simples (só funciona para variáveis compostas (arrays) e objetos.):
+
+    primeiro cria a variável e depois acrescenta o nome do array
+
+    for (let pos in num) {
+        console.log(num[pos])
+    }
+
+    ---------------------------------------------------------------------------------------------------------------
+    Buscar valores dentro de um array:
+
+    num.indexOf(7): busca onde está o posicionado o valor 7. retornando como resposta a posição dele. neste caso, retorna a posição '4'
+
+    caso o valor procurado não exista dentro do array, ele irá retornar o valor '-1'
+-->
