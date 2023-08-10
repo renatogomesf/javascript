@@ -1,23 +1,32 @@
+let num = document.getElementById('num')
+let lista = document.getElementById('lista')
+let res = document.getElementById('res')
+let valores = []
 
+function isNumero(n) {
+    if (Number(n) >= 1 && Number(n) <= 100) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function inLista(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+}
 
 function adicionar() {
-    var numero = document.getElementById('num')
-    var resultado = document.getElementById('res')
-
-    if (numero.value.length == 0) {
-        window.alert('Porfavor digite um número')
+    if (isNumero(num.value) && inLista(num.value, valores)) {
+        window.alert('ok')
     } else {
-        var n = Number(numero.value)
-        let op = document.createElement('option')
-        op.text = `O número ${n} foi adicionado! `
-        resultado.appendChild(op)
+        window.alert('Valor invalido ou já encontrado na lista.')
     }
 }
 
 function finalizar() {
-    let memo = [2,2,2,2]
-    let des = document.getElementById('des')
-    let p = document.createElement('p')
-    p.innerText = `Ao todo, temos ${memo.length} números cadastrados.`
-    des.appendChild(p)
+    window.alert()
 }
