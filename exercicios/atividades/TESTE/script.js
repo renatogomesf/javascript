@@ -1,7 +1,9 @@
 let num1 = document.getElementById('fnum1')
 let num2 = document.getElementById('fnum2')
 let res = document.getElementById('res')
+
 function somar() {
+    res.innerHTML = ''
     let n1 = Number(num1.value)
     let n2 = Number(num2.value)
     let s = n1 + n2
@@ -9,19 +11,22 @@ function somar() {
     let p = document.createElement('p')
     p.innerText = `A soma entre ${n1} e ${n2} é igual a ${s}`
     res.appendChild(p)
+    
 }
 
 function subtr() {
+    res.innerHTML = ''
     let n1 = Number(num1.value)
     let n2 = Number(num2.value)
     let s = n1 - n2
-
+    
     let p = document.createElement('p')
     p.innerText = `A subtração entre ${n1} e ${n2} é igual a ${s}`
     res.appendChild(p)
 }
 
 function mult() {
+    res.innerHTML = ''
     let n1 = Number(num1.value)
     let n2 = Number(num2.value)
     let s = n1 * n2
@@ -32,6 +37,7 @@ function mult() {
 }
 
 function divi() {
+    res.innerHTML = ''
     let n1 = Number(num1.value)
     let n2 = Number(num2.value)
     let s = n1 / n2
