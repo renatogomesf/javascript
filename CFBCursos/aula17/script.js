@@ -5,7 +5,7 @@ while (n <= 10){
     n++ // é preciso fazer encremento pois a condição seria sempre verdadeira e se tornaria um loop infinito. com o encremento o valor de "n" aumenta e em algum momento se torna falso e sai do loop.
 }
 
-console.log('-------------------')
+console.log("-------------------")
 
 //fatorial
 
