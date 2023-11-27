@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Funções Anônimas:
+
+        não possui um nome associado ao seu corpo/conteúdo (ex: "soma()". não possui "soma", somente os "()"). não fica salva na memória e só é criada no momento da execução e funciona como uma função padrão.
+
+        é preciso associar essa função a uma variável (var,let,const) para que, quando a variável for chamada, ela cria a função e executa ela. 
+
+        extrutura:
+
+        const f = function(v1,v2){
+            return v1 + v2
+        }
+
+        console.log(f(10,5))
+
+        função construtor (com o operador "new"):
+
+        serve para funções mais simples, com poucos parâmetros. a "function" deve ser com "f" maiúsculo. ou seja, "Function" e, para não dar erro, as variáveis e o return devem estar entre áspas.
+
+        quem manda é sempre o último parâmetro (neste caso, "return v1+v2+v3"). ele vai ser o corpo da função e define o que será feito com os parâmetros "v1", "v2", "v3".
+
+        extrutura:
+
+        const f = new Function("v1", "v2", "v3", "return v1+v2+v3")
+
+        console.log(f(10,5,5))
+
+     -->
+
+    <script src="script.js"></script>
+</body>
+</html>
