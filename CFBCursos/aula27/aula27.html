@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Funções Geradoras:
+
+        Uma funão geradora tem seu retorno adiado até o momento em que precisamos desse retorno. são o pilar da programação assíncrona.
+
+        a própria função tem controle sobre o retorno de algo. não precisa de todo o processamento pra retornar algo no final... é possível ir retornando coisas ao longo da função... quando chamo a função, ela retorna uma coisa, quando chamada novamente, ela pode retornar outra coisa.
+
+        quando chamada num primeiro momento, ela retorna um iterador. quando chamada pela segunda vez, ela entra na execução e vai retornar sempre que houver um "yield".
+
+        sempre que encontra uma declaração "yield" ela para as iterações e retorna o que está entre áspas no próprio yield. só volta a iterar novamente caso seja chamada novamente.
+
+        para funções geradoras, é necessário o uso de "function" e a indicação de função geradora é o uso do asterisco "*".
+
+        estrutura:
+
+        function* cores(){
+            yield 'vermelho'
+            yield 'verde'
+            yield 'azul'
+        }
+
+        "itc": iterador das cores
+
+        const itc = cores() //primeira chamada retorna iterador
+
+        //.next(): proxima execução da funçõa
+        //value: o que eu quero do next. o valor do yield
+        console.log(itc.next().value) //segunda chamada entra na função e executa até encontrar um yield
+
+        //chamando mais duas vezes, a própria função sabe onde parou e não vai retornar mais o "vermelho".
+        console.log(itc.next().value) //retorna "verde"
+        console.log(itc.next().value) //retorna "azul"
+
+        caso queira chamar a função novamente, precisa criar um novo iterador.
+     -->
+
+    <script src="scrip.js"></script>
+</body>
+</html>
