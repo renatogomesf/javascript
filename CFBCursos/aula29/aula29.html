@@ -7,7 +7,31 @@
 </head>
 <body>
     <!-- 
+        Operador "This" dentro de funções:
 
+        para pode trabalhar com um parâmetro que tenha o mesmo nome da variável que irei associa-lo, ao invés criar uma variável comum com nome diferente e jogar o parâmetro nela, posso usar o operador "this" e ter os dois com o mesmo nome.
+
+        o operador this só faz referência à função naqual está inserido. ele não puxa parâmetros de fora da função. porém, com o uso de arrow function, se torna possível pegar parâmetros de fora da função/do pai/root.
+
+        ex:
+            FORMA COMUM
+
+        function aluno(nome,nota){
+            let vnome = nome (vnome recebe o parâmetro nome)
+            let vnota = nota (vnota recebe o parâmetro nota)
+
+            console.log(vnome)
+            console.log(vnota)
+        }
+
+            COM OPERADOR THIS
+        function aluno(nome,nota){
+            this.nome = nome
+            this.nota = nota
+
+            console.log(nome)
+            console.log(nota)
+        }
 
 
 
