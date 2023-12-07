@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aula34.css">
+</head>
+<body>
+    <!-- 
+        Adicionando eventos com addEventListener (PARTE 01):
+
+        addEventListener: um escutador de eventos.
+
+        para adicionar um evento, é preciso pegar a variável com o elemento do DOM e adicionar um ".addEventListener" na variável. esse addEventListener precisa receber qual evento vai ser trabalhado e o que será executado quando o evento ocorrer.
+
+        ex: 
+
+        ELEMENTO DO DOM COLOCADO NUMA VARIÁVEL:
+        const c1 = document.querySelector("#c1")
+
+        FUNÇÃO QUE SERÁ EXECUTADA:
+        const msg = ()=> {
+            window.alert("clicou")
+        }
+
+        VARIÁVEL COM O ESCUTADOR RECEBENDO O EVENTO (CLIQUE) E A FUNÇÃO QUE SERÁ EXECUTADA (msg). a função não precisa necessária mente de parênteses. 
+        c1.addEventListener("click",msg)
+
+        ao executar um evento de um determinado elemtento, é possível capturar o evento que foi executado e quem executou/disparou o evento.
+
+        eventos: acontecimentos da página que disparam funções.
+
+        é possível  adicionar eventos no html e no javascript. porém, o mais recomendável é no javascript.
+        ex:
+
+        o "onclick" chamando a função "msg()" no html
+        <div id="c1" class="curso c1" onclick="msg()">html</div>
+
+
+    -->
+
+    <div id="c1" class="curso c1">html</div>
+    <div id="c2" class="curso c1">css</div>
+    <div id="c3" class="curso c1">javascript</div>
+    <div id="c4" class="curso c1">php</div>
+    <div id="c5" class="curso c1">react</div>
+    <div id="c6" class="curso c1">mysql</div>
+    <div id="c7" class="curso c2">c++</div>
+    <div id="c8" class="curso c2">c#</div>
+    <div id="c9" class="curso c2">arduino</div>
+    <div id="c10" class="curso c2">react native</div>
+    <div id="c11" class="curso c2">python</div>
+    <div id="c12" class="curso c2">raspberry</div>
+
+    <script src="aula34.js"></script>
+</body>
+</html>
