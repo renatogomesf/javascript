@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aula37.css">
+</head>
+<body>
+    <!-- 
+        ".stopPropagation()":
+
+        para a propagação de um evento.
+        
+        ex: quando adicionamos um evento numa tag que possua filhos, esse evento se propaga pros filhos. ou seja, se eu adicionar um evento de clique em "caixa1", caso eu clique nas div "c1, c2, ...", esse evento de clique também será disparado... sendo que o evento deveria acontecer somente quando clica na caixa1. para isso, existe o stopPropagation, que para a propagação de um evendo pros filhos da tag. com isso, o evento de clique só ocorre clicando na caixa1 e não nas div's filho.
+
+        o stop precisa ser usado dentro do ".addEventListener()", para usa-lo, é preciso associar o stop a um parâmetro que está recebendo um evento. 
+
+        ex:
+
+        btn_c1.addEventListener("click",(evt)=>{
+            evt.stopPropagation()
+        })
+    -->
+
+    <main>
+        <div id="caixa1" class="caixa">
+            <div id="c1" class="curso c1">HTML</div>
+            <div id="c2" class="curso c1">CSS</div>
+            <div id="c3" class="curso c1">Javascript</div>
+            <div id="c4" class="curso c1">PHP</div>
+            <div id="c5" class="curso c1">React</div>
+            <div id="c6" class="curso c1">MySQL</div>
+        </div>
+    </main>
+
+    <script src="aula37.js"></script>
+</body>
+</html>
