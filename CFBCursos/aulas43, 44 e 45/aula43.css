@@ -87,6 +87,7 @@ button{
 }
 
 #nomeCurso{
+    border: 2px solid black;
     padding: 5px;
     margin: 15px;
 }
