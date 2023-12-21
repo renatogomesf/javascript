@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.v1,.v2,.res{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#valor1,#valor2,.resultado{
+    height: 25px;
+    background-color: rgb(219, 219, 219);
+    border: none;
+    border-radius: 5px;
+}
+
+.btn{
+    margin: 5px;
+    padding: 5px;
+}
+
+button{
+    height: 30px;
+    width: 30px;
+    margin: 0px 5px;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+}
