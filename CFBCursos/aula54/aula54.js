@@ -1,6 +1,7 @@
 const caixa = document.querySelector("#caixa")
 
 // "new" reserva na memória/deixa salvo. agora tem salvo uma coleção chamada mapa do tipo map.
+//não é possível inicializar a coleção já com elementos. ela é definida vazia e é preciso o uso do set para preencher a coleção.
 let mapa = new Map()
 
 //".set("chave","valor")": adiciona elementos na coleção definindo uma chave e o elemento desta chave.
@@ -27,7 +28,7 @@ if(mapa.has(pes)){
 }
 
 //".size": diz o tamanho da coleção.
-caixa.innerHTML += "<br/> o tamanho da coleção é " + mapa.size
+caixa.innerHTML += "<br> o tamanho da coleção é " + mapa.size
 
 //".forEach(el,i,a)": percorre o array/coleção, elemento por elemento, retornando o elemento, índice/chave ou o proprio array/coleção.
 mapa.forEach((el,i)=>{
