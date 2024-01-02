@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aula63.css">
+</head>
+<body>
+    <!--
+        Exercício sobre classe.
+    -->
+
+    <div id="criarCarro" class="criarCarro">
+        <div class="campoForm">
+            <label for="fnome">Nome</label>
+            <input type="text" name="fnome" id="fnome" value="">
+        </div>
+        <div class="campoForm">
+            <label for="fportas">Portas</label>
+            <input type="number" name="fportas" id="fportas" value="0">
+        </div>
+        <div class="campoForm">
+            <label for="fblindagem">Blindagem</label>
+            <input type="number" name="fblindagem" id="fblindagem" disabled value="0">
+        </div>
+        <div class="campoForm">
+            <label for="fmunição">Munição</label>
+            <input type="number" name="fmunição" id="fmunição" disabled value="0">
+        </div>
+        <div class="campoForm">
+            <label for="ftipo">Tipos:</label>
+            <div class="radio">
+                <input type="radio" name="ftipo" id="ftipoMilitar" value="m">
+                <label for="ftipoMilitar">Militar</label>
+            </div>
+            <div class="radio">
+                <input type="radio" name="ftipo" id="ftipoNormal" value="n">
+                <label for="ftipoNormal">Normal</label>
+            </div>
+        </div>
+        <div class="campoForm">
+            <button id="btn_addCarro">Adicionar</button>
+        </div>
+    </div>
+    <div class="carros">
+        <!-- adições irão aqui -->
+    </div>
+
+    <script src="aula63.js"></script>
+</body>
+</html>
