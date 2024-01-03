@@ -13,6 +13,11 @@ const carros = document.querySelector(".carros")
 
 let a_carros = []
 
+const remover = (quem)=>{
+    a_carros = a_carros.filter((el)=>{
+        return el.nome != quem
+    })
+}
 
 ftipoMilitar.addEventListener("click",()=>{
     fnome.value = ""
@@ -37,8 +42,21 @@ const gerenciarExibicao = ()=>{
 
     a_carros.forEach((c)=>{
         const div = document.createElement("div")
+        const btn = document.createElement("button")
+
+        btn.addEventListener("click",(evt)=>{
+            const quemRemover = evt.target.parentNode.dataset.nome
+            remover(quemRemover)
+            gerenciarExibicao()
+        })
+
         div.setAttribute("class","carro")
+        div.setAttribute("data-nome",c.nome)
+
         div.innerHTML = `Nome: ${c.nome} <br> Portas: ${c.portas} <br> Blindagem: ${c.blindagem} <br> Munição: ${c.municao}`
+        btn.innerHTML = "Remover"
+        
+        div.appendChild(btn)
         carros.appendChild(div)
     })
 }
