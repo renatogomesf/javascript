@@ -4,12 +4,25 @@ const div_relogio = document.querySelector(".div_relogio")
 
 // classe "new Date()" na qual puxa informações de data e hora completas do computador.
 const data = new Date()
+console.log(data)
 
 div_data.innerHTML = data.toLocaleDateString()
 
-div_relogio.innerHTML = data.toLocaleTimeString()
 
-console.log(data)
+
+// CRIANDO RELOGIO EM TEMPO REAL.
+const relogio = ()=>{
+    const data = new Date()
+    div_relogio.innerHTML = data.toLocaleTimeString()
+}
+
+// "setInterval()": função que chama outra função de acordo com o tempo definido. neste caso, chama a função relogio() a cada 1 segundo. o tempo deve ser cololado em milisegundo... 1000 milisegundos = 1 segundo
+const intervalo = setInterval(relogio,1000)
+
+
+
+
+//-----------------------------------------------------------------------
 
 // timestemp - "Date.now()": retorna uma contagem, em milisegundos, que é feita desde 01 de janeiro de 1970 atá os dias atuais. ou seja, diz quanto tempo se passou, em milisegundos, desde 1970.
 
