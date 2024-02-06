@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+*{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.olhos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+}
+
+.olho{
+    width: 200px;
+    height: 200px;
+
+    /* por padrão, a origem de imagens é o canto esquerdo superior. com o transform-origin, a origem agora é o centro exato da imagem. */
+    transform-origin: center center;
+}
