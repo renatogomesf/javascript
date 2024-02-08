@@ -13,13 +13,45 @@ let bolas = []
 let num_bola = 0
 
 class Bola{
-    constructor(){
+    constructor(arrayBolas,palco){
         this.tamanho = Math.floor(Math.random()*10)+10
+
         this.r = Math.floor(Math.random()*255)
         this.g = Math.floor(Math.random()*255)
         this.b = Math.floor(Math.random()*255)
+
         this.posiçao_x = Math.floor(Math.random()*(largura_palco-this.tamanho))
         this.posiçao_y = Math.floor(Math.random()*(altura_palco-this.tamanho))
+
+        this.velocidade_x = Math.floor(Math.random()*2)+0.5
+        this.velocidade_y = Math.floor(Math.random()*2)+0.5
+
+        this.direçao_x = Math.random()*10 > 5 ? 1 : -1
+        this.direçao_y = Math.random()*10 > 5 ? 1 : -1
+
+        this.palco = palco
+        this.arrayBolas = arrayBolas
+        this.id = Date.now()+"_"+Math.floor(Math.random()*100000000000000)
+
+        this.desenhar()
+        this.controle = setInterval(this.controlar,10)
+        this.relaçao = document.getElementById(this.id)
+    }
+
+    posiçao = ()=>{
+
+    }
+
+    remover = ()=>{
+
+    }
+
+    desenhar = ()=>{
+
+    }
+
+    controlar = ()=>{
+
     }
 }
 
