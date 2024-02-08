@@ -54,7 +54,7 @@ class Bola{
             }
         })
 
-        this.relaçao = remove()
+        this.relaçao.remove()
         num_bola--
         num_objetos.innerHTML = num_bola
     }
@@ -63,20 +63,52 @@ class Bola{
         const div = document.createElement("div")
         div.setAttribute("id",this.id)
         div.setAttribute("class","bola")
+
         div.setAttribute("style",`
-        left:${this.posiçao_x};
-        top:${this.posiçao_y};
-        width:${this.tamanho};
-        height:${this.tamanho};
+        left:${this.posiçao_x}px;
+        top:${this.posiçao_y}px;
+        width:${this.tamanho}px;
+        height:${this.tamanho}px;
         background-color:rgb(${this.r},${this.g},${this.b})`
         )
+
         this.palco.appendChild(div)
+    }
+
+    colisao_bordas = ()=>{
+        if(this.posiçao_x + this.tamanho >= largura_palco){
+            this.direçao_x = -1
+        }else if(this.posiçao_x <= 0){
+            this.direçao_x = 1
+        }
+
+        if(this.posiçao_y + this.tamanho >= altura_palco){
+            this.direçao_y = -1
+        }else if(this.posiçao_y <= 0){
+            this.direçao_y = 1
+        }  
     }
 
     controlar = ()=>{
 
+        this.colisao_bordas()
+        this.posiçao_x += this.direçao_x * this.velocidade_x
+        this.posiçao_y += this.direçao_y * this.velocidade_y
+
+        this.relaçao.setAttribute("style",`
+        left:${this.posiçao_x}px;
+        top:${this.posiçao_y}px;
+        width:${this.tamanho}px;
+        height:${this.tamanho}px;
+        background-color:rgb(${this.r},${this.g},${this.b})`
+        )
+
+        if((this.posiçao_x > largura_palco) || (this.posiçao_y > altura_palco)){
+            this.remover()
+        }
     }
 }
+
 
 // "resize": quando redimencionar a tela... pega o novo tamanho e joga dentro de suas respectivas variáveis.
 window.addEventListener("resize",(evt)=>{
@@ -88,12 +120,12 @@ btn_add.addEventListener("click",(evt)=>{
     const qted = txt_qted.value
 
     for(let i=0;i<qted;i++){
-
+        bolas.push(new Bola(bolas,palco))
     }
 })
 
 btn_remover.addEventListener("click",(evt)=>{
     bolas.map((b)=>{
-
+        b.remover()
     })
 })
