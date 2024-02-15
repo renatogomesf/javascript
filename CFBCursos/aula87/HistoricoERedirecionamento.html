@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aula87.css">
+</head>
+<body>
+    <!--
+        Histórico e Redirecionamento.
+    -->
+
+    <h1>CFB Cursos</h1>
+    <!-- "onsubmit="event.preventDefault()"": cancela o envio padrão de um form quando clica no botão e permite que o botão possa navegar/acessar a url -->
+    <form onsubmit="event.preventDefault()">
+        <input type="url" name="url" id="url" placeholder="https://cfbcursos.com.br" pattern="https://.*" size="30" required>
+        <button id="btn_url">Ir</button>
+    </form>
+
+    <script src="aula87.js"></script>
+</body>
+</html>
